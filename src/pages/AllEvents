@@ -1,0 +1,80 @@
+import React from 'react';
+import { Table, TableBody, TableCell, TableContainer, TableHead, TablePagination, TableRow, Paper, Link } from '@mui/material';
+
+const columns = [
+  { id: 'name', label: 'Tên sự kiện/hoạt động', minWidth: 150 },
+  { id: 'organization', label: 'Đơn vị tổ chức', minWidth: 120 },
+  { id: 'email', label: 'Email', minWidth: 150 },
+  { id: 'date', label: 'Ngày diễn ra', minWidth: 120 },
+  { id: 'time', label: 'Thời gian', minWidth: 100 },
+  { id: 'location', label: 'Địa điểm tổ chức', minWidth: 150 },
+  { id: 'action', label: 'Thao tác', minWidth: 100 },
+];
+
+const rows = [
+  { name: 'Giải bóng đá khối 10', organization: 'Phòng thể thao', email: 'bachkhoa@gmail.com', date: '30/02/2024', time: '6:50 pm', location: 'Sân vận động', action: 'Tham gia' },
+  { name: 'Giải bóng đá khối 11', organization: 'Phòng thể thao', email: '10', date: '30/02/2024', time: '6:50 pm', location: 'Sân vận động', action: 'Tham gia' },
+  { name: 'Giải bóng đá khối 12', organization: 'Tuyển Chí Lê', email: '10', date: '30/02/2024', time: '10', location: '10', action: 'Tham gia' },
+];
+
+export default function AllEvents() {
+  const [page, setPage] = React.useState(0);
+  const [rowsPerPage, setRowsPerPage] = React.useState(10);
+
+  const handleChangePage = (event, newPage) => {
+    setPage(newPage);
+  };
+
+  const handleChangeRowsPerPage = (event) => {
+    setRowsPerPage(+event.target.value);
+    setPage(0);
+  };
+
+  return (
+    <Paper sx={{ width: '100%', overflow: 'hidden', padding: 2 }}>
+      <h1 style={{ textAlign: 'center', color: '#333' }}>Toàn bộ sự kiện</h1>
+      <TableContainer sx={{ maxHeight: 440 }}>
+        <Table stickyHeader>
+          <TableHead>
+            <TableRow>
+              {columns.map((column) => (
+                <TableCell key={column.id} style={{ minWidth: column.minWidth, fontWeight: 'bold' }}>
+                  {column.label}
+                </TableCell>
+              ))}
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {rows.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((row, index) => (
+              <TableRow hover role="checkbox" tabIndex={-1} key={index}>
+                {columns.map((column) => {
+                  const value = row[column.id];
+                  return (
+                    <TableCell key={column.id}>
+                      {column.id === 'action' ? (
+                        <Link href="#" underline="hover" color="primary">
+                          + {value}
+                        </Link>
+                      ) : (
+                        value
+                      )}
+                    </TableCell>
+                  );
+                })}
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
+      <TablePagination
+        rowsPerPageOptions={[10, 25, 100]}
+        component="div"
+        count={rows.length}
+        rowsPerPage={rowsPerPage}
+        page={page}
+        onPageChange={handleChangePage}
+        onRowsPerPageChange={handleChangeRowsPerPage}
+      />
+    </Paper>
+  );
+}

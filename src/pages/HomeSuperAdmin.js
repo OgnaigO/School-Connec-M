@@ -3,7 +3,7 @@ import Headersteacher from '../component/Headersteacher';
 import { Outlet } from 'react-router-dom';
 import { EuiPageTemplate } from '@elastic/eui';
 import Footer from '../component/Footer';
-import Sidebarteacher from '../component/SideBarteacher';
+import Sidebarteacher from '../component/SideBarSuperAdmin';
 
 export default function Hometeacher() {
   const [openSideBarteacher, setOpenSideBarteacher] = useState(false);  {/* Thêm dấu chấm phẩy */}

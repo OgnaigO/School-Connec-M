@@ -3,7 +3,7 @@ import Headers from '../component/Headers'
 import { Outlet } from 'react-router-dom'
 import { EuiPageTemplate } from '@elastic/eui'
 import Footer from '../component/Footer'
-import SideBar from '../component/SideBar'
+import SideBar from '../component/SideBarSchoolAdmin'
 
 export default function Home() {
   const [openSideBar,setOpenSideBar]=useState(false)
