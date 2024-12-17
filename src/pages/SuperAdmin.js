@@ -147,26 +147,7 @@ export default function Dashboard() {
                         </EuiText>
                     </div>
 
-                    <div
-                        style={{
-                            display: 'flex',
-                            flexDirection: 'row',
-                            alignItems: 'center',
-                            justifyContent: 'flex-end',
-                            flex: '1 0 auto',
-                        }}
-                    >
-                        <EuiButtonEmpty
-                            color="primary"
-                            style={{
-                                display: 'none',
-                                width: '40px',
-                                height: '40px',
-                            }}
-                        >
-                            Năm học: 2024-2025
-                        </EuiButtonEmpty>
-                    </div>
+                    
                 </div>
             </EuiPageTemplate.Header>
 
