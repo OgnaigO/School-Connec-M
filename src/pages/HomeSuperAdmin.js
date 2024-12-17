@@ -6,16 +6,16 @@ import Footer from '../component/Footer';
 import Sidebarteacher from '../component/SideBarSuperAdmin';
 
 export default function Hometeacher() {
-  const [openSideBarteacher, setOpenSideBarteacher] = useState(false);  {/* Thêm dấu chấm phẩy */}
-  const clickSideBarteacher = () => setOpenSideBarteacher(!openSideBarteacher);  {/* Thêm dấu chấm phẩy */}
+  const [openSideBarteacher, setOpenSideBarteacher] = useState(false);  
+  const clickSideBarteacher = () => setOpenSideBarteacher(!openSideBarteacher);  
   
   return (
     <>
       <EuiPageTemplate>
-        <Headersteacher clickSideBarteacher={clickSideBarteacher} />  {/* Thêm dấu chấm phẩy */}
+        <Headersteacher clickSideBarteacher={clickSideBarteacher} />  
         {openSideBarteacher && (
-          <EuiPageTemplate.Sidebar minWidth='220px' paddingSize='s'>
-            <Sidebarteacher />  {/* Không thay đổi */}
+          <EuiPageTemplate.Sidebar minWidth='300px' paddingSize='s'>
+            <Sidebarteacher />  
           </EuiPageTemplate.Sidebar>
         )}
         <Outlet />

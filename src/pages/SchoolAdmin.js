@@ -79,6 +79,7 @@ const COLORS = ['#FF8008', '#EEEEEE'];
 
 function Dashboard() {
   return (
+    
     <div
       style={{
         display: 'grid',
@@ -91,6 +92,25 @@ function Dashboard() {
         boxSizing: 'border-box',
       }}
     >
+      {/* Header */}
+                  <EuiPageTemplate.Header style={{ backgroundColor: '#F7F8FC' }}
+                      paddingSize="m" >
+                          <EuiFlexGroup justifyContent="spaceBetween" alignItems="center" >
+                              <EuiFlexItem grow={false}>
+                                  <EuiFlexGroup gutterSize="s" alignItems="center" >
+                                      <EuiFlexItem grow={false}>
+                                          <EuiText><h2>Trang chủ</h2></EuiText>
+                                      </EuiFlexItem>
+                                  </EuiFlexGroup>
+                              </EuiFlexItem>
+                              <EuiFlexItem grow={false}>
+                                  <EuiButtonEmpty color="primary" href="#" style={{ textDecoration: 'underline' }}>
+                                      Năm học: 2024-2025
+                                  </EuiButtonEmpty>
+                              </EuiFlexItem>
+                          </EuiFlexGroup>
+                          </EuiPageTemplate.Header>
+      
       {/* Điểm danh */}
       <div
         style={{

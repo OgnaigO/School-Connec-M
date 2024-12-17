@@ -65,8 +65,8 @@ export default function SideBar() {
         style={{ borderBlockStart: 'none' }}
       >
         <EuiListGroup flush gutterSize="none">
-        <EuiListGroupItem label={<> <EuiIcon type="gear" size="m" /><Link to="/schedule"style={{ color: 'black' }}>Quản lý tài khoản</Link></>} />
-        <EuiListGroupItem label={<> <EuiIcon type="gear" size="m" /><Link to="/schedule"style={{ color: 'black' }}>Quản lý lớp học</Link></>} />
+        <EuiListGroupItem label={<> <EuiIcon type="gear" size="m" /><Link to="/schedule"style={{ color: 'black' }}> Quản lý tài khoản</Link></>} />
+        <EuiListGroupItem label={<> <EuiIcon type="gear" size="m" /><Link to="/schedule"style={{ color: 'black' }}> Quản lý lớp học</Link></>} />
 
         </EuiListGroup>
       </EuiCollapsibleNavGroup>

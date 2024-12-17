@@ -13,7 +13,7 @@ export default function Home() {
     <EuiPageTemplate>
       <Headers clickSideBar={clickSideBar}/>
         {openSideBar&&
-        <EuiPageTemplate.Sidebar minWidth='220px' paddingSize='s'>
+        <EuiPageTemplate.Sidebar minWidth='300px' paddingSize='s'>
             <SideBar/>
         </EuiPageTemplate.Sidebar>
         }
