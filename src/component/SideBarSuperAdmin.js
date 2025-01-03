@@ -77,7 +77,7 @@ export default function SideBarteacher() {
                   width: '10px'
                 }}></div>
               </div>
-                <EuiIcon type="clock" size="m" style={{ marginRight: '8px' }} />
+                <EuiIcon type="gear" size="m" style={{ marginRight: '8px' }} />
                 <Link to="/notifications" style={{ color: 'black' }}>Danh sách trường học</Link>
               </div>
             }

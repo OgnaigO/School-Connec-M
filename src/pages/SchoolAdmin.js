@@ -9,7 +9,6 @@ import {
   EuiIcon,
   EuiPageTemplate,
 } from '@elastic/eui';
-import { FaUsers, FaFileAlt } from 'react-icons/fa';
 import logo from '../assets/logo1.png';
 
 const columns = [
